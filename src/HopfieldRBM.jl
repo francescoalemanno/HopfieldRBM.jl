@@ -67,6 +67,7 @@ function glauber_flip_σ!(S::RBM{T},β::T) where T
         end
     end
 end
+
 function ∇logP!(S::RBM{T},g::AbstractMatrix{T},σD::AbstractVector{T}) where T
     apply_σ!(S,σD)
     for μ in 1:S.P, k in 1:S.N
